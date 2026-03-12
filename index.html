@@ -1,1 +1,247 @@
-Em construção ...
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Ateliê Gepetto - Artes em Madeira</title>
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f2ec;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+background:white;
+text-align:center;
+padding:40px 20px;
+border-bottom:3px solid #e6e0d6;
+}
+
+header img{
+width:200px;
+}
+
+header h1{
+color:#3e2a1f;
+margin:10px 0 0 0;
+font-size:32px;
+}
+
+header p{
+color:#7a6a5d;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* GALERIA */
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.04);
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card h3{
+padding:10px;
+margin:0;
+font-size:18px;
+color:#3e2a1f;
+}
+
+/* SOBRE O ARTESÃO */
+
+#sobre-artesao{
+padding:60px 20px;
+background:#ffffff;
+}
+
+.container-sobre{
+max-width:1000px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:30px;
+}
+
+.foto-artesao{
+flex-shrink:0;
+}
+
+.foto-artesao img{
+width:100%;
+max-width:180px;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:50%;
+border:5px solid #6b3f25;
+}
+
+.texto-artesao{
+flex:1;
+}
+
+.texto-artesao h2{
+color:#3e2a1f;
+margin-bottom:10px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+font-size:18px;
+padding:15px 22px;
+border-radius:50px;
+text-decoration:none;
+box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+
+footer{
+background:#3e2a1f;
+color:#eee;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:700px){
+
+.container-sobre{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" alt="Logo Ateliê Gepetto">
+
+<h1>Ateliê Gepetto</h1>
+<p>Suas idéias ganham vida com artes em madeira</p>
+
+</header>
+
+
+<div class="container">
+
+<h2>Meus Trabalhos</h2>
+
+<div class="galeria">
+
+<div class="card">
+<img src="foto1.jpg">
+<h3>Escultura em madeira</h3>
+</div>
+
+<div class="card">
+<img src="foto2.jpg">
+<h3>Pingente artesanal</h3>
+</div>
+
+<div class="card">
+<img src="foto3.jpg">
+<h3>Escultura de animal</h3>
+</div>
+
+<div class="card">
+<img src="foto4.jpg">
+<h3>Peça decorativa</h3>
+</div>
+
+</div>
+
+</div>
+
+
+<section id="sobre-artesao">
+
+<div class="container-sobre">
+
+<div class="foto-artesao">
+<img src="foto-artesao.jpg" alt="Foto do Artesão">
+</div>
+
+<div class="texto-artesao">
+
+<h2>Sobre o Artesão</h2>
+
+<p>
+Meu nome é Franklin de Oliveira e sou o artesão por trás do Ateliê Gepetto.
+Trabalho criando peças únicas em madeira, valorizando os veios
+naturais e a beleza do material.
+</p>
+
+<p>
+Cada peça é feita manualmente com atenção aos detalhes,
+transformando a madeira em arte.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<a class="whatsapp"
+href="https://wa.me/5511999999999"
+target="_blank">
+Falar no WhatsApp
+</a>
+
+
+<footer>
+
+© 2026 - Ateliê Gepetto Artes em Madeira
+
+</footer>
+
+</body>
+
+</html>
