@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Ateliê Gepetto - Peças artesanais em madeira feitas à mão. Esculturas, pingentes, brinquedos, utilitários e peças decorativas.">
+  <meta name="description" content="Ateliê Gepetto - Peças artesanais em madeira feitas à mão. Esculturas, pingentes e peças decorativas.">
 
   <meta property="og:title" content="Ateliê Gepetto - Artes em Madeira">
   <meta property="og:description" content="Onde suas ideias ganham vida">
@@ -508,13 +508,14 @@
     <h1>Ateliê Gepetto</h1>
     <p>Onde suas ideias ganham vida</p>
 
-    <div>Gostaria de uma encomenda personalizada? Faça um orçamento clicando no botão abaixo!</div>
+    <div>Confira abaixo os produtos já em estoque disponíveis para envio imediato.</div>
+    <div>Gostaria de uma encomenda personalizada? Faça o orçamento no botão abaixo!</div>
 
     <a class="botao-capa"
        href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
        target="_blank">
 
-      Fazer orçamento
+      Pedir orçamento
 
     </a>
 
@@ -524,83 +525,175 @@
 
 <div class="container" id="trabalhos">
 
-  <h2>Trabalhos já realizados</h2>
+  <h2>Artes em estoque</h2>
+
+  <p>Confira abaixo as peças em estoque com envio imediato.</p>
+
+<!--  <div class="filtro">-->
+
+<!--    <button onclick="filtrar('todos')">Todos</button>-->
+<!--    <button onclick="filtrar('escultura')">Esculturas</button>-->
+<!--    <button onclick="filtrar('pingente')">Pingentes</button>-->
+
+<!--  </div>-->
 
   <div class="galeria">
 
-    <div class="card">
+    <!-- CARD 1 -->
+
+    <div class="card escultura">
+
 
       <div class="carousel">
 
-        <div class="carousel-track">
-          <iframe src="https://www.youtube.com/embed/hbQc1GosqYQ" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-      </div>
-
-      <h3>Escultura de Tucano - Madeira Tília (Basswood)</h3>
-
-    </div>
-
-    <div class="card">
-
-      <div class="carousel">
+        <button class="seta esquerda">&#10094;</button>
 
         <div class="carousel-track">
+
           <iframe src="https://www.youtube.com/embed/REut2PZn2mU" frameborder="0" allowfullscreen></iframe>
+          <img src="foto1.jpg" onclick="abrirImagem(this)">
+          <img src="foto2.jpg" onclick="abrirImagem(this)">
+          <img src="foto3.jpg" onclick="abrirImagem(this)">
+
         </div>
+
+        <button class="seta direita">&#10095;</button>
+
+        <div class="carousel-dots"></div>
 
       </div>
 
-      <h3>Escultura de Golfinho - Madeira Pínus</h3>
+      <h3>Escultura em madeira</h3>
+      <div class="preco">Unidade: R$ 120,00<br>10% de desconto acima de 3 unidades</div>
+
+      <div class="quantidade">
+        Quantidade: <button class="menos">-</button> <input type="number" value="1" min="1" class="qtd"> <button class="mais">+</button>
+      </div>
+
+      <div class="total">Total: R$ 120,00</div>
+
+      <a class="botao-whatsapp"
+         href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
+         target="_blank">
+
+        Comprar pelo WhatsApp
+
+      </a>
 
     </div>
 
-    <div class="card">
+    <!-- CARD 2 -->
+
+    <div class="card pingente">
 
       <div class="carousel">
 
+        <button class="seta esquerda">&#10094;</button>
+
         <div class="carousel-track">
-          <iframe src="https://www.youtube.com/embed/sfievRMjd-c" frameborder="0" allowfullscreen></iframe>
+
+          <img src="foto1.jpg" onclick="abrirImagem(this)">
+          <img src="foto2.jpg" onclick="abrirImagem(this)">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+
+
         </div>
+
+        <button class="seta direita">&#10095;</button>
+
+        <div class="carousel-dots"></div>
 
       </div>
 
-      <h3>Pingente Coração - Marchetaria</h3>
+      <h3>Pingente artesanal</h3>
+      <div class="preco">Unidade: R$ 120,00<br>10% de desconto acima de 3 unidades</div>
 
-    </div>
-
-    <div class="card">
-
-      <div class="carousel">
-
-        <div class="carousel-track">
-          <img src="pingente-coracao.jpg">
-        </div>
-
+      <div class="quantidade">
+        Quantidade: <button class="menos">-</button> <input type="number" value="1" min="1" class="qtd"> <button class="mais">+</button>
       </div>
 
-      <h3>Pingentes de Coração - Marchetaria</h3>
+      <div class="total">Total: R$ 120,00</div>
 
-    </div>
+      <a class="botao-whatsapp"
+         href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
+         target="_blank">
 
-    <div class="card">
+        Comprar pelo WhatsApp
 
-      <div class="carousel">
-
-        <div class="carousel-track">
-          <iframe src="https://www.youtube.com/embed/wb-pOLElMn0" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-      </div>
-
-      <h3>Pingente Letra N - Madeiras Carvalho e Cumaru</h3>
+      </a>
 
     </div>
 
   </div>
 
 </div>
+
+<section id="encomendas">
+
+  <div class="container">
+
+    <h2>Encomendas personalizadas</h2>
+
+    <p>Confira abaixo as encomendas feitas de forma personalizada para os clientes.</p>
+
+    <div class="galeria">
+
+      <!-- CARD ENCOMENDA 1 -->
+
+      <div class="card encomenda">
+
+        <div class="carousel">
+
+          <button class="seta esquerda">&#10094;</button>
+
+          <div class="carousel-track">
+
+            <img src="foto1.jpg" onclick="abrirImagem(this)">
+            <img src="foto2.jpg" onclick="abrirImagem(this)">
+            <img src="foto3.jpg" onclick="abrirImagem(this)">
+
+          </div>
+
+          <button class="seta direita">&#10095;</button>
+
+          <div class="carousel-dots"></div>
+
+        </div>
+
+        <h3>Encomenda Personalizada 1</h3>
+
+      </div>
+
+      <!-- CARD ENCOMENDA 2 -->
+
+      <div class="card encomenda">
+
+        <div class="carousel">
+
+          <button class="seta esquerda">&#10094;</button>
+
+          <div class="carousel-track">
+
+            <img src="foto1.jpg" onclick="abrirImagem(this)">
+            <img src="foto2.jpg" onclick="abrirImagem(this)">
+
+          </div>
+
+          <button class="seta direita">&#10095;</button>
+
+          <div class="carousel-dots"></div>
+
+        </div>
+
+        <h3>Encomenda Personalizada 2</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 <section id="sobre-artesao">
 
@@ -616,11 +709,12 @@
 
       <p>
         Meu nome é Franklin de Oliveira e sou o artesão por trás do Ateliê Gepetto.
-        Trabalho criando peças únicas em madeira, como esculturas, pingentes, brinquedos, utilitários e peças decorativas.
+        Trabalho criando peças únicas em madeira, como esculturas, pingentes, utilitários e brinquedos.
       </p>
 
       <p>
-        Cada peça é feita manualmente com atenção aos detalhes, transformando a madeira em arte.
+        Cada peça é feita manualmente com atenção aos detalhes,
+        transformando a madeira em arte e destacando sua beleza natural.
       </p>
 
     </div>
