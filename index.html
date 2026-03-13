@@ -2,254 +2,783 @@
 <html lang="pt-br">
 
 <head>
-<meta charset="UTF-8">
-<title>Ateliê Gepetto - Artes em Madeira</title>
-<meta name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<meta property="og:title" content="Ateliê Gepetto - Artes em Madeira">
-<meta property="og:description" content="Onde suas idéias ganham vida">
-<meta property="og:image" content="https://ateliegepetto.com.br/logo.png">
-<meta property="og:url" content="https://ateliegepetto.com.br">
-<meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <title>Ateliê Gepetto - Artes em Madeira</title>
 
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <meta name="description" content="Ateliê Gepetto - Peças artesanais em madeira feitas à mão. Esculturas, pingentes e peças decorativas.">
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f5f2ec;
-color:#333;
-}
+  <meta property="og:title" content="Ateliê Gepetto - Artes em Madeira">
+  <meta property="og:description" content="Onde suas ideias ganham vida">
+  <meta property="og:image" content="https://ateliegepetto.com.br/logo.png">
+  <meta property="og:url" content="https://ateliegepetto.com.br">
+  <meta property="og:type" content="website">
 
-/* HEADER */
+  <link rel="icon" href="favicon.ico">
 
-header{
-background:white;
-text-align:center;
-padding:40px 20px;
-border-bottom:3px solid #e6e0d6;
-}
+  <style>
 
-header img{
-width:200px;
-}
+    /* ===== GERAL ===== */
 
-header h1{
-color:#3e2a1f;
-margin:10px 0 0 0;
-font-size:32px;
-}
+    html{
+    scroll-behavior:smooth;
+    }
 
-header p{
-color:#7a6a5d;
-}
+    body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f2ec;
+    color:#333;
+    }
 
-/* CONTAINER */
+    /* ===== MENU ===== */
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
+    nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:1000;
+    }
 
-/* GALERIA */
+    .menu{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+    }
 
-.galeria{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+    .menu-logo{
+    font-weight:bold;
+    color:#3e2a1f;
+    }
 
-.card{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
-transition:0.3s;
-}
+    .menu-links a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#3e2a1f;
+    font-weight:bold;
+    }
 
-.card:hover{
-transform:scale(1.04);
-}
+    /* ===== HERO ===== */
 
-.card img{
-width:100%;
-display:block;
-}
+    .hero{
+    margin-top:60px;
+    height:420px;
+    background-image:url("capa-madeira.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+    }
 
-.card h3{
-padding:10px;
-margin:0;
-font-size:18px;
-color:#3e2a1f;
-}
+    .hero::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.45);
+    }
 
-/* SOBRE O ARTESÃO */
+    .hero-content{
+    position:relative;
+    z-index:2;
+    }
 
-#sobre-artesao{
-padding:60px 20px;
-background:#ffffff;
-}
+    .hero h1{
+    font-size:42px;
+    margin:0;
+    }
 
-.container-sobre{
-max-width:1000px;
-margin:auto;
-display:flex;
-align-items:center;
-gap:30px;
-}
+    .hero p{
+    font-size:20px;
+    margin-top:10px;
+    }
 
-.foto-artesao{
-flex-shrink:0;
-}
+    .botao-capa{
+    display:inline-block;
+    margin-top:20px;
+    background:#6b3f25;
+    color:white;
+    padding:14px 26px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+    }
 
-.foto-artesao img{
-width:100%;
-max-width:180px;
-aspect-ratio:1/1;
-object-fit:cover;
-border-radius:50%;
-border:5px solid #6b3f25;
-}
+    .botao-capa:hover{
+    background:#8a5635;
+    transform:scale(1.05);
+    }
 
-.texto-artesao{
-flex:1;
-}
+    /* ===== CONTAINER ===== */
 
-.texto-artesao h2{
-color:#3e2a1f;
-margin-bottom:10px;
-}
+    .container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+    }
 
-/* WHATSAPP */
+    /* ===== FILTRO ===== */
 
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-font-size:18px;
-padding:15px 22px;
-border-radius:50px;
-text-decoration:none;
-box-shadow:0 5px 10px rgba(0,0,0,0.3);
-}
+    .filtro{
+    text-align:center;
+    margin-bottom:30px;
+    }
 
-/* FOOTER */
+    .filtro button{
+    margin:5px;
+    padding:10px 18px;
+    border:none;
+    background:#6b3f25;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+    }
 
-footer{
-background:#3e2a1f;
-color:#eee;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
+    /* ===== GALERIA ===== */
 
-/* RESPONSIVO */
+    .galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    }
 
-@media (max-width:700px){
+    .card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    animation:fadeUp 0.8s ease;
+    }
 
-.container-sobre{
-flex-direction:column;
-text-align:center;
-}
+    .card h3{
+    padding:12px;
+    margin:0;
+    color:#3e2a1f;
+    }
 
-}
+    /* ===== ANIMAÇÃO ===== */
 
-</style>
+    @keyframes fadeUp{
+    from{
+    opacity:0;
+    transform:translateY(30px);
+    }
+    to{
+    opacity:1;
+    transform:translateY(0);
+    }
+    }
+
+    /* ===== CARROSSEL ===== */
+
+    .carousel{
+    position:relative;
+    overflow:hidden;
+    }
+
+    .carousel-track{
+    display:flex;
+    transition:transform 0.35s ease;
+    touch-action:pan-y;
+    }
+
+    .carousel-track img{
+    width:100%;
+    flex-shrink:0;
+    cursor:pointer;
+    }
+
+    .carousel-track iframe{
+    width:100%;
+    height:200px;
+    flex-shrink:0;
+    }
+
+    /* ===== SETAS ===== */
+
+    .seta{
+    position:absolute;
+    top:45%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:22px;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:5;
+    }
+
+    .seta.esquerda{
+    left:10px;
+    }
+
+    .seta.direita{
+    right:10px;
+    }
+
+    /* ===== BOLINHAS ===== */
+
+    .carousel-dots{
+    text-align:center;
+    padding:8px 0;
+    }
+
+    .carousel-dots span{
+    display:inline-block;
+    width:9px;
+    height:9px;
+    margin:4px;
+    background:#ccc;
+    border-radius:50%;
+    cursor:pointer;
+    transition:0.2s;
+    }
+
+    .carousel-dots span.active{
+    background:#6b3f25;
+    transform:scale(1.2);
+    }
+
+    /* ===== SOBRE ===== */
+
+    #sobre-artesao{
+    background:white;
+    padding:60px 20px;
+    }
+
+    .container-sobre{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    }
+
+    .foto-artesao img{
+    max-width:180px;
+    border-radius:50%;
+    border:5px solid #6b3f25;
+    }
+
+    .texto-artesao{
+    flex:1;
+    }
+
+    /* ===== WHATSAPP ===== */
+
+    .whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    padding:14px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    box-shadow:0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    /* ===== LIGHTBOX ===== */
+
+    .lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+    }
+
+    .lightbox img{
+    max-width:90%;
+    max-height:90%;
+    }
+
+    .lightbox .seta{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:22px;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:5;
+    }
+
+    .lightbox .seta.esquerda{
+    left:10px;
+    }
+
+    .lightbox .seta.direita{
+    right:10px;
+    }
+
+    .lightbox .carousel-dots{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    }
+
+    .lightbox .carousel-dots span{
+    display:inline-block;
+    width:9px;
+    height:9px;
+    margin:4px;
+    background:#ccc;
+    border-radius:50%;
+    cursor:pointer;
+    transition:0.2s;
+    }
+
+    .lightbox .carousel-dots span.active{
+    background:#6b3f25;
+    transform:scale(1.2);
+    }
+
+    /* ===== FOOTER ===== */
+
+    footer{
+    background:#3e2a1f;
+    color:#eee;
+    text-align:center;
+    padding:20px;
+    }
+
+    /* ===== RESPONSIVO ===== */
+
+    @media (max-width:700px){
+
+    .container-sobre{
+    flex-direction:column;
+    text-align:center;
+    }
+
+    .hero{
+    height:320px;
+    }
+
+    .hero h1{
+    font-size:30px;
+    }
+
+    }
+
+  </style>
 
 </head>
 
 <body>
 
-<header>
+<nav>
 
-<img src="logo.png" alt="Logo Ateliê Gepetto">
+  <div class="menu">
 
-<h1>Ateliê Gepetto</h1>
-<p>Onde suas idéias ganham vida</p>
+    <div class="menu-logo">
+      Ateliê Gepetto
+    </div>
 
-</header>
+    <div class="menu-links">
+      <a href="#">Início</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#sobre-artesao">Sobre</a>
+    </div>
 
+  </div>
 
-<div class="container">
+</nav>
 
-<h2>Meus Trabalhos</h2>
+<section class="hero">
 
-<div class="galeria">
+  <div class="hero-content">
 
-<div class="card">
-<img src="foto1.jpg">
-<h3>Escultura em madeira</h3>
-</div>
+    <h1>Ateliê Gepetto</h1>
+    <p>Onde suas ideias ganham vida em madeira</p>
 
-<div class="card">
-<img src="foto2.jpg">
-<h3>Pingente artesanal</h3>
-</div>
+    <a class="botao-capa"
+       href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
+       target="_blank">
 
-<div class="card">
-<img src="foto3.jpg">
-<h3>Escultura de animal</h3>
-</div>
+      Pedir orçamento
 
-<div class="card">
-<img src="foto4.jpg">
-<h3>Peça decorativa</h3>
-</div>
+    </a>
 
-</div>
-
-</div>
-
-
-<section id="sobre-artesao">
-
-<div class="container-sobre">
-
-<div class="foto-artesao">
-<img src="foto-artesao.jpg" alt="Foto do Artesão">
-</div>
-
-<div class="texto-artesao">
-
-<h2>Sobre o Artesão</h2>
-
-<p>
-Meu nome é Franklin de Oliveira e sou o artesão por trás do Ateliê Gepetto.
-Trabalho criando peças únicas em madeira, valorizando os veios
-naturais e a beleza do material.
-</p>
-
-<p>
-Cada peça é feita manualmente com atenção aos detalhes,
-transformando a madeira em arte.
-</p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
+<div class="container" id="trabalhos">
+
+  <h2>Meus Trabalhos</h2>
+
+  <div class="filtro">
+
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('escultura')">Esculturas</button>
+    <button onclick="filtrar('pingente')">Pingentes</button>
+
+  </div>
+
+  <div class="galeria">
+
+    <!-- CARD 1 -->
+
+    <div class="card escultura">
+
+
+      <div class="carousel">
+
+        <button class="seta esquerda">&#10094;</button>
+
+        <div class="carousel-track">
+
+          <img src="foto1.jpg" onclick="abrirImagem(this)">
+          <img src="foto2.jpg" onclick="abrirImagem(this)">
+          <img src="foto3.jpg" onclick="abrirImagem(this)">
+          <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+
+        <button class="seta direita">&#10095;</button>
+
+        <div class="carousel-dots"></div>
+
+      </div>
+
+      <h3>Escultura em madeira</h3>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="card pingente">
+
+      <div class="carousel">
+
+        <button class="seta esquerda">&#10094;</button>
+
+        <div class="carousel-track">
+
+          <img src="foto1.jpg" onclick="abrirImagem(this)">
+          <img src="foto2.jpg" onclick="abrirImagem(this)">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+
+
+        </div>
+
+        <button class="seta direita">&#10095;</button>
+
+        <div class="carousel-dots"></div>
+
+      </div>
+
+      <h3>Pingente artesanal</h3>
+
+    </div>
+
+  </div>
+
+</div>
+
+<section id="sobre-artesao">
+
+  <div class="container-sobre">
+
+    <div class="foto-artesao">
+      <img src="foto-artesao.jpg">
+    </div>
+
+    <div class="texto-artesao">
+
+      <h2>Sobre o Artesão</h2>
+
+      <p>
+        Meu nome é Franklin de Oliveira e sou o artesão por trás do Ateliê Gepetto.
+        Trabalho criando peças únicas em madeira valorizando os veios naturais.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 <a class="whatsapp"
-href="https://wa.me/5511982850059"
-target="_blank">
-Falar no WhatsApp (11) 98285-0059
+   href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
+   target="_blank">
+
+  💬 WhatsApp
+
 </a>
 
+<div id="lightbox" class="lightbox" onclick="fecharImagem()">
+  <button class="seta esquerda" id="lightbox-prev">&#10094;</button>
+  <img id="lightbox-img">
+  <button class="seta direita" id="lightbox-next">&#10095;</button>
+  <div class="carousel-dots" id="lightbox-dots"></div>
+</div>
 
 <footer>
 
-© 2026 - Ateliê Gepetto Artes em Madeira
+  © 2026 - Ateliê Gepetto Artes em Madeira
 
 </footer>
+
+<script>
+
+  let lightboxImages = [];
+  let lightboxIndex = 0;
+  let isDraggingLightbox = false;
+
+  // Global drag functions for lightbox
+  function startDragLightbox(e){
+    e.preventDefault();
+    isDraggingLightboxLocal = true;
+    startXLightbox = e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+  }
+
+  function endDragLightbox(e){
+    if(!isDraggingLightboxLocal) return;
+    let endX = e.type.includes("mouse") ? e.pageX : e.changedTouches[0].clientX;
+    let diff = startXLightbox - endX;
+    if(diff > 50 && lightboxIndex < lightboxImages.length - 1){
+      lightboxIndex++;
+      updateLightbox();
+    }
+    if(diff < -50 && lightboxIndex > 0){
+      lightboxIndex--;
+      updateLightbox();
+    }
+    isDraggingLightboxLocal = false;
+    setTimeout(() => isDraggingLightbox = false, 0);
+  }
+
+  let startXLightbox = 0;
+  let isDraggingLightboxLocal = false;
+
+  /* LIGHTBOX */
+
+  function abrirImagem(img){
+
+    let carousel = img.closest('.carousel');
+    lightboxImages = Array.from(carousel.querySelectorAll('.carousel-track img'));
+    lightboxIndex = lightboxImages.indexOf(img);
+
+    let lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "flex";
+
+    updateLightbox();
+
+    // Set up dots
+    let dotsContainer = document.getElementById("lightbox-dots");
+    dotsContainer.innerHTML = '';
+    lightboxImages.forEach((_, i) => {
+      let dot = document.createElement("span");
+      if (i === lightboxIndex) dot.classList.add("active");
+      dot.onclick = (e) => {
+        e.stopPropagation();
+        lightboxIndex = i;
+        updateLightbox();
+      };
+      dotsContainer.appendChild(dot);
+    });
+
+    // Set up arrows
+    document.getElementById("lightbox-prev").onclick = (e) => {
+      e.stopPropagation();
+      if (lightboxIndex > 0) {
+        lightboxIndex--;
+        updateLightbox();
+      }
+    };
+
+    document.getElementById("lightbox-next").onclick = (e) => {
+      e.stopPropagation();
+      if (lightboxIndex < lightboxImages.length - 1) {
+        lightboxIndex++;
+        updateLightbox();
+      }
+    };
+
+    // Set up drag for gestures
+    let lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.removeEventListener("mousedown", startDragLightbox);
+    lightboxImg.removeEventListener("touchstart", startDragLightbox);
+    lightboxImg.removeEventListener("mouseup", endDragLightbox);
+    lightboxImg.removeEventListener("mouseleave", endDragLightbox);
+    lightboxImg.removeEventListener("touchend", endDragLightbox);
+    lightboxImg.addEventListener("mousedown", startDragLightbox);
+    lightboxImg.addEventListener("touchstart", startDragLightbox);
+    lightboxImg.addEventListener("mouseup", endDragLightbox);
+    lightboxImg.addEventListener("mouseleave", endDragLightbox);
+    lightboxImg.addEventListener("touchend", endDragLightbox);
+
+  }
+
+  function updateLightbox(){
+    let lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = lightboxImages[lightboxIndex].src;
+
+    let dotsContainer = document.getElementById("lightbox-dots");
+    dotsContainer.querySelectorAll("span").forEach((d, i) => {
+      d.classList.toggle("active", i === lightboxIndex);
+    });
+  }
+
+  function fecharImagem(){
+    if(isDraggingLightbox) return;
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  /* FILTRO */
+
+  function filtrar(categoria){
+
+  let cards=document.querySelectorAll(".card");
+
+  cards.forEach(card=>{
+
+  if(categoria==="todos"){
+  card.style.display="block";
+  }
+
+  else if(card.classList.contains(categoria)){
+  card.style.display="block";
+  }
+
+  else{
+  card.style.display="none";
+  }
+
+  });
+
+  }
+
+  /* CARROSSEL */
+
+
+  document.querySelectorAll(".carousel").forEach(carousel=>{
+
+  const track=carousel.querySelector(".carousel-track");
+  const items=track.querySelectorAll("img, iframe");
+  const dotsContainer=carousel.querySelector(".carousel-dots");
+
+  const btnPrev=carousel.querySelector(".seta.esquerda");
+  const btnNext=carousel.querySelector(".seta.direita");
+
+  let index=0;
+  let startX=0;
+  let isDragging=false;
+
+  items.forEach((item,i)=>{
+
+  let dot=document.createElement("span");
+
+  if(i===0) dot.classList.add("active");
+
+  dot.onclick=()=>{
+  index=i;
+  update();
+  };
+
+  dotsContainer.appendChild(dot);
+
+  });
+
+  function update(){
+
+  track.style.transform="translateX(-"+(index*100)+"%)";
+
+  dotsContainer.querySelectorAll("span").forEach(d=>d.classList.remove("active"));
+  dotsContainer.children[index].classList.add("active");
+
+  }
+
+  btnPrev.onclick=()=>{
+
+  if(index>0){
+  index--;
+  update();
+  }
+
+  }
+
+  btnNext.onclick=()=>{
+
+  if(index<items.length-1){
+  index++;
+  update();
+  }
+
+  }
+
+  /* arrastar */
+
+  track.addEventListener("mousedown",startDrag);
+  track.addEventListener("touchstart",startDrag);
+
+  track.addEventListener("mouseup",endDrag);
+  track.addEventListener("mouseleave",endDrag);
+  track.addEventListener("touchend",endDrag);
+
+  function startDrag(e){
+
+  isDragging=true;
+  startX=e.type.includes("mouse")?e.pageX:e.touches[0].clientX;
+
+  }
+
+  function endDrag(e){
+
+  if(!isDragging) return;
+
+  let endX=e.type.includes("mouse")?e.pageX:e.changedTouches[0].clientX;
+
+  let diff=startX-endX;
+
+  if(diff>50 && index<items.length-1){
+  index++;
+  }
+
+  if(diff<-50 && index>0){
+  index--;
+  }
+
+  update();
+
+  isDragging=false;
+
+  }
+
+  });
+
+</script>
 
 </body>
 
