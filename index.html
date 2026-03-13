@@ -56,6 +56,13 @@
     .menu-logo{
     font-weight:bold;
     color:#3e2a1f;
+    display:flex;
+    align-items:center;
+    }
+
+    .logo-img{
+    height:40px;
+    margin-right:10px;
     }
 
     .menu-links a{
@@ -94,6 +101,28 @@
     .hero-content{
     position:relative;
     z-index:2;
+    text-align:center;
+    padding-top:30px;
+    }
+
+    .hero-logo{
+      height:200px;
+      max-height:28vw;
+      margin-bottom:24px;
+      margin-top:10px;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      max-width:95vw;
+      object-fit:contain;
+    }
+
+    @media (max-width:700px){
+      .hero-logo{
+        height:72px;
+        max-height:22vw;
+        margin-bottom:14px;
+      }
     }
 
     .hero h1{
@@ -168,6 +197,14 @@
     padding:12px;
     margin:0;
     color:#3e2a1f;
+    }
+
+    .preco{
+    font-weight:bold;
+    color:#6b3f25;
+    text-align:center;
+    margin:5px 0;
+    font-size:18px;
     }
 
     /* ===== ANIMAÇÃO ===== */
@@ -390,6 +427,54 @@
 
     }
 
+    .botao-whatsapp{
+    display:block;
+    margin:10px auto;
+    background:#25D366;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    transition:0.3s;
+    }
+
+    .botao-whatsapp:hover{
+    background:#128C7E;
+    transform:scale(1.05);
+    }
+
+    .quantidade{
+    text-align:center;
+    margin:10px 0;
+    }
+
+    .quantidade button{
+    background:#6b3f25;
+    color:white;
+    border:none;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+    }
+
+    .quantidade input{
+    width:50px;
+    text-align:center;
+    margin:0 10px;
+    font-size:16px;
+    }
+
+    .total{
+    text-align:center;
+    font-weight:bold;
+    color:#6b3f25;
+    margin:5px 0;
+    }
+
   </style>
 
 </head>
@@ -401,13 +486,16 @@
   <div class="menu">
 
     <div class="menu-logo">
+      <img src="logo.png" alt="Logo" class="logo-img">
       Ateliê Gepetto
     </div>
 
     <div class="menu-links">
       <a href="#">Início</a>
-      <a href="#trabalhos">Trabalhos</a>
+      <a href="#trabalhos">Peças</a>
+      <a href="#encomendas">Encomendas</a>
       <a href="#sobre-artesao">Sobre</a>
+
     </div>
 
   </div>
@@ -418,8 +506,13 @@
 
   <div class="hero-content">
 
+    <img src="logo.png" alt="Logo" class="hero-logo">
+
     <h1>Ateliê Gepetto</h1>
-    <p>Onde suas ideias ganham vida em madeira</p>
+    <p>Onde suas ideias ganham vida</p>
+
+    <div>Confira abaixo os produtos já em estoque disponíveis para envio imediato.</div>
+    <div>Gostaria de uma encomenda personalizada? Faça o orçamento no botão abaixo!</div>
 
     <a class="botao-capa"
        href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
@@ -435,15 +528,17 @@
 
 <div class="container" id="trabalhos">
 
-  <h2>Meus Trabalhos</h2>
+  <h2>Peças em estoque</h2>
 
-  <div class="filtro">
+  <p>Confira abaixo as peças em estoque com envio imediato.</p>
 
-    <button onclick="filtrar('todos')">Todos</button>
-    <button onclick="filtrar('escultura')">Esculturas</button>
-    <button onclick="filtrar('pingente')">Pingentes</button>
+<!--  <div class="filtro">-->
 
-  </div>
+<!--    <button onclick="filtrar('todos')">Todos</button>-->
+<!--    <button onclick="filtrar('escultura')">Esculturas</button>-->
+<!--    <button onclick="filtrar('pingente')">Pingentes</button>-->
+
+<!--  </div>-->
 
   <div class="galeria">
 
@@ -472,6 +567,21 @@
       </div>
 
       <h3>Escultura em madeira</h3>
+      <div class="preco">Unidade: R$ 120,00<br>10% de desconto acima de 3 unidades</div>
+
+      <div class="quantidade">
+        Quantidade: <button class="menos">-</button> <input type="number" value="1" min="1" class="qtd"> <button class="mais">+</button>
+      </div>
+
+      <div class="total">Total: R$ 120,00</div>
+
+      <a class="botao-whatsapp"
+         href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
+         target="_blank">
+
+        Comprar pelo WhatsApp
+
+      </a>
 
     </div>
 
@@ -499,12 +609,94 @@
       </div>
 
       <h3>Pingente artesanal</h3>
+      <div class="preco">Unidade: R$ 120,00<br>10% de desconto acima de 3 unidades</div>
+
+      <div class="quantidade">
+        Quantidade: <button class="menos">-</button> <input type="number" value="1" min="1" class="qtd"> <button class="mais">+</button>
+      </div>
+
+      <div class="total">Total: R$ 120,00</div>
+
+      <a class="botao-whatsapp"
+         href="https://wa.me/5511982850059?text=Olá%20vim%20pelo%20site%20do%20Ateliê%20Gepetto"
+         target="_blank">
+
+        Comprar pelo WhatsApp
+
+      </a>
 
     </div>
 
   </div>
 
 </div>
+
+<section id="encomendas">
+
+  <div class="container">
+
+    <h2>Encomendas personalizadas</h2>
+
+    <p>Confira abaixo as encomendas feitas de forma personalizada para os clientes.</p>
+
+    <div class="galeria">
+
+      <!-- CARD ENCOMENDA 1 -->
+
+      <div class="card encomenda">
+
+        <div class="carousel">
+
+          <button class="seta esquerda">&#10094;</button>
+
+          <div class="carousel-track">
+
+            <img src="foto1.jpg" onclick="abrirImagem(this)">
+            <img src="foto2.jpg" onclick="abrirImagem(this)">
+            <img src="foto3.jpg" onclick="abrirImagem(this)">
+
+          </div>
+
+          <button class="seta direita">&#10095;</button>
+
+          <div class="carousel-dots"></div>
+
+        </div>
+
+        <h3>Encomenda Personalizada 1</h3>
+
+      </div>
+
+      <!-- CARD ENCOMENDA 2 -->
+
+      <div class="card encomenda">
+
+        <div class="carousel">
+
+          <button class="seta esquerda">&#10094;</button>
+
+          <div class="carousel-track">
+
+            <img src="foto1.jpg" onclick="abrirImagem(this)">
+            <img src="foto2.jpg" onclick="abrirImagem(this)">
+
+          </div>
+
+          <button class="seta direita">&#10095;</button>
+
+          <div class="carousel-dots"></div>
+
+        </div>
+
+        <h3>Encomenda Personalizada 2</h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 <section id="sobre-artesao">
 
@@ -776,6 +968,40 @@
 
   }
 
+  });
+
+  // Quantity and total calculation
+  document.querySelectorAll('.card').forEach(card => {
+    const precoUnit = 120.00;
+    const qtdInput = card.querySelector('.qtd');
+    const totalDiv = card.querySelector('.total');
+    const whatsappBtn = card.querySelector('.botao-whatsapp');
+    const title = card.querySelector('h3').textContent;
+
+    function updateTotal(){
+      const qtd = parseInt(qtdInput.value);
+      let total = precoUnit * qtd;
+      if(qtd >= 4){
+        total *= 0.9;
+      }
+      totalDiv.textContent = 'Total: R$ ' + total.toFixed(2).replace('.', ',');
+      whatsappBtn.href = `https://wa.me/5511982850059?text=Olá, gostaria de comprar ${qtd} unidades de ${title} por R$ ${total.toFixed(2).replace('.', ',')}`;
+    }
+
+    card.querySelector('.menos').onclick = () => {
+      if(qtdInput.value > 1){
+        qtdInput.value--;
+        updateTotal();
+      }
+    };
+
+    card.querySelector('.mais').onclick = () => {
+      qtdInput.value++;
+      updateTotal();
+    };
+
+    qtdInput.onchange = updateTotal;
+    updateTotal(); // initial
   });
 
 </script>
